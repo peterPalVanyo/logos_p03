@@ -1,18 +1,134 @@
-h1 {
-    color: aqua;
+body {
+  font-family: "Asap", sans-serif;
+  color: white;
+  background-color: #ebebeb;
+}
+.container {
+  min-height: 500px;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 150px;
+}
+.header-container {
+  width: 100%;
+  background-color: rgb(60, 60, 60);
+  min-height: 100px;
+  position: fixed;
+}
+header {
+  min-height: 100px;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+header p,
+header p span,
+header a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+header p span {
+  font-weight: bold;
+}
+nav a {
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+.col {
+  width: 30%;
+  margin-bottom: 10px;
+  background-color: rgb(223, 153, 223);
+}
+.col p {
+  font-size: 1.4rem;
+  padding: 20px 25px;
+  line-height: 1.8rem;
+}
+.col > p::first-line {
+  font-weight: bold;
+}
+.col > img {
+  width: 100%;
+  height: auto;
 }
 
+.hide-desktop {
+  display: none;
+}
+.burgermenu {
+    width: 40px;
+}
+.tablet-wrapper {
+    display: none;
+}
 /* tablet view */
 @media (max-width: 768px) {
-    h1 {
-        color: black;
+  .col {
+    width: 47%;
+  }
+  .hide-desktop {
+    display: block;
+  }
+  .header-container {
+    position: relative;
+  }
+  .container {
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+  header nav {
+    /* padding-bottom: 15px; */
+    display: none;
+  }
+  /* header nav a {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  } */
+  .logo {
+    padding: 20px 0;
+    margin-left: 40px;
+  }
+  .tablet-wrapper {
+      display: block;
+      padding-right: 40px;
+  }
+  .tablet-nav {
+      display: none;
+      position: absolute;
+      background-color: #ebebeb;
+      border: 1px solid black;
+      top: 1;
+      right: 0;
+      transform: translate(-40px, 10px);
     }
+    .tablet-nav a {
+        color: black;
+      display: block;
+      padding: 15px 25px;
+  }
+  .tablet-nav a:hover {
+      color: rgb(223, 153, 223);
+  }
+
 }
 /* mobile view: usually 360 */
 @media (max-width: 500px) {
-    h1 {
-        color: red;
-        font-family: 'Courier New', Courier, monospace;
-    }
+  .col {
+    width: 90%;
+  }
+  .hide-mobile {
+    display: none;
+  }
 }
 /* total view, desktop */
